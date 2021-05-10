@@ -22,7 +22,7 @@ if __name__ == '__main__':
             dht = setup()
             try:
                 data = read(dht)
-                timestamp = data["timestamp"]
+                timestamp = data["timestamp"].strftime('%Y-%m-%d %H:%M:%S')
                 hum = data["humidity"]
                 temp = data["temp"]
                 print(f"Last valid input: {timestamp}" )
